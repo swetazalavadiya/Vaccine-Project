@@ -8,10 +8,17 @@ let userSchema = new mongoose.Schema({
     PhoneNumber: {
         type: Number,
         required: true,
-        // unique:true
+        unique:true
     },
-    Age: Number,
-
+    Age: {
+        type:Number,
+        require:true
+    },
+    Dose:{
+        type:String,
+        enum:["none","first","second"],
+        require:true
+        },
     Pincode: {
         type: Number,
         require:true
@@ -19,9 +26,9 @@ let userSchema = new mongoose.Schema({
     AadharNo:{
         type: String,
          require:true,
-        //  unique:true
+         unique:true
         },
-    password: {
+    Password: {
         type: String,
         required: true
     }
