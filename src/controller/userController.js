@@ -80,3 +80,4 @@ const login = async (req, res) => {
 
 
 module.exports = { Register, login }
+

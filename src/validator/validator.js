@@ -1,5 +1,5 @@
 let isValidPhone = (Mobile) => {
-    return /^[6-9]\d{9}$/.test(Mobile)
+    return ((/^((\+91)?|91)?[6789][0-9]{9}$/g).test(Mobile))
 }
 
 let isValidPassword = function (password) {
@@ -30,5 +30,9 @@ let isValidPincode = (num) => {
     return /^[1-9]{1}[0-9]{2}\s{0,1}[0-9]{3}$/.test(num);
 }
 
+const isValidDate = (value) => {
+    return (/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/).test(value)
+}
 
-module.exports={isValidPhone,}
+
+module.exports={isValidPhone,isValidPassword,isValidName,isValid,isValidAadhar,isValidNumber,isValidPincode, isValidDate}
